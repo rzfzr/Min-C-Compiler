@@ -3,9 +3,10 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/laris.DESKTOP-LM3EARV/Desktop/Mini%20C/grammar/parser/grammarC.g4</file>
-            <file>file:/C:/Users/laris.DESKTOP-LM3EARV/Desktop/Mini%20C/src/semantic/Visitor.java</file>
-            <file>file:/C:/Users/laris.DESKTOP-LM3EARV/Desktop/Mini%20C/src/run/Run.java</file>
+            <file>file:/home/rzfzr/Desktop/GitGud/Min-C-Compiler/Mini%20C/src/semantic/Visitor.java</file>
+            <file>file:/home/rzfzr/Desktop/GitGud/Min-C-Compiler/Mini%20C/src/semantic/NewVisitor.java</file>
+            <file>file:/home/rzfzr/Desktop/GitGud/Min-C-Compiler/Mini%20C/grammar/parser/grammarC.g4</file>
+            <file>file:/home/rzfzr/Desktop/GitGud/Min-C-Compiler/Mini%20C/src/run/Run.java</file>
         </group>
     </open-files>
 </project-private>

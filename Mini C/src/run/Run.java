@@ -34,8 +34,7 @@ public class Run {
         grammarCLexer lexer = new grammarCLexer(stream);            //Lexer
         TokenStream tokens = new CommonTokenStream(lexer);  //nextToken 
         grammarCParser parser = new grammarCParser(tokens);         //Parser
-        grammarCParser.ProgContext prog
-                = parser.prog();        //Exec Parser prog
+        grammarCParser.PrimaryExpressionContext prog = parser.primaryExpression();        //Exec Parser prog
         showParseTreeFrame(prog, parser);
         //SemanticVisitor pv = new SemanticVisitor();
         //pv.visit(prog);
