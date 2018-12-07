@@ -14,6 +14,8 @@ import org.antlr.v4.runtime.CommonTokenStream;
 import org.antlr.v4.runtime.TokenStream;
 import org.antlr.v4.runtime.tree.ParseTree;
 import parser.*;
+import semantic.Visitor;
+import parser.grammarCLexer;
 
 public class Run {
 
@@ -21,7 +23,12 @@ public class Run {
         //  showParseTreeFrame(prog, parser);
 
         String filename = "test.c";
-
+        
+        
+        CharStream charInput = new ANTLRFileStream(filename);
+        grammarCLexer lexer = new grammarCLexer(charInput);
+        
+        
         if (args.length >= 1) {
             filename = args[0];
         }
@@ -31,13 +38,14 @@ public class Run {
         } else {
             stream = new ANTLRInputStream(System.in);
         }
-        grammarCLexer lexer = new grammarCLexer(stream);            //Lexer
+        //grammarCLexer lexer = new grammarCLexer(stream);            //Lexer
         TokenStream tokens = new CommonTokenStream(lexer);  //nextToken 
         grammarCParser parser = new grammarCParser(tokens);         //Parser
-        grammarCParser.PrimaryExpressionContext prog = parser.primaryExpression();        //Exec Parser prog
+        grammarCParser.ProgContext prog
+                = parser.prog();        //Exec Parser prog
         showParseTreeFrame(prog, parser);
-        //SemanticVisitor pv = new SemanticVisitor();
-        //pv.visit(prog);
+        Visitor pv = new Visitor();
+        pv.visit(prog);
 
     }
 
